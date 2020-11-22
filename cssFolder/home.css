@@ -29,7 +29,7 @@ nav p{
     background-color: #535D55;
     position: absolute;
     top: 46x;
-    width: 100%;
+    /*width: 100%;*/
     left: 0;    
     z-index: 1;
     padding:14px;
