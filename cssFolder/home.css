@@ -1,3 +1,6 @@
+body{
+    margin:0
+}
 nav a{ color:inherit;/*移除超連結顏色*/
         text-decoration: none;/*移除底線*/
         /*display:block;/*讓<a>填滿<li>*/
