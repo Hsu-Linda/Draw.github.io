@@ -20,7 +20,7 @@ nav p{
     color:white;
 }
 
-.dropdown:hover{
+.dropdown:hover .dropdown-content{
     display: block;    
 }
 
