@@ -1,37 +1,28 @@
 body{
     margin:0
 }
-nav{ background-color:#669;
+nav{ background-color:#535D55;
 }
-nav a{ color:white;/*移除超連結顏色*/
+nav a{ color:white;
         text-decoration: none;/*移除底線*/
         display:block;/*讓<a>填滿<li>*/
         float: right;
-        padding:14px 16px
+        padding:14px 30px
 
        }
-.hover-color:hover {
-    background-color:#7f9871 ;/**#535D55*/
-    color:white;
+nav a:hover {
+    background-color:#7f9871 ;
 }
 
-/*.dropdown {
-    float: left;
-    overflow: hidden;
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: #313;
-    padding: 14px 16px;
-    background-color: inherit;
-    font: inherit;
-    margin: 0;
-  }
-*/
+.dropdown:hover{
+    display: block;
+    
+}
+
 .dropdown-content{
-    display: none;
+    display: none;/*一開始先隱藏*/
     position: absolute;
-    background-color: thistle;
+    background-color: #7f9871;
     box-sizing: border-box;
     width: 100%;
     left: 0;
