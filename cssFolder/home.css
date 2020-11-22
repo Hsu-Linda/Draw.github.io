@@ -27,9 +27,9 @@ nav p{
 .dropdown-content{
     display: none;/*一開始先隱藏*/
     background-color: #7f9871;
+    position: absolute;
     width: 100%;
     left: 0;    
-    
     z-index: 1;
     padding:16px;
     color:white;
