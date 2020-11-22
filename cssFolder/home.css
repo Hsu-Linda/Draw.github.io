@@ -6,7 +6,7 @@ nav{ display:flex;
      justify-content:flex-end;
     }
 
-.hover-color {
+.hover-color:hover {
     background-color:#7f9871 ;/**#535D55*/
     color:white;
 }
