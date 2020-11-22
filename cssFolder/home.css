@@ -1,19 +1,21 @@
 body{
     margin:0
 }
-nav a{ color:inherit;/*移除超連結顏色*/
-        text-decoration: none;/*移除底線*/
-        /*display:block;/*讓<a>填滿<li>*/
-       }
 nav{ background-color:#669;
-    }
+}
+nav a{ color:white;/*移除超連結顏色*/
+        text-decoration: none;/*移除底線*/
+        display:block;/*讓<a>填滿<li>*/
+        float: right;
+        padding:14px 16px
 
+       }
 .hover-color:hover {
     background-color:#7f9871 ;/**#535D55*/
     color:white;
 }
 
-.dropdown {
+/*.dropdown {
     float: left;
     overflow: hidden;
     font-size: 16px;  
@@ -25,7 +27,7 @@ nav{ background-color:#669;
     font: inherit;
     margin: 0;
   }
-
+*/
 .dropdown-content{
     display: none;
     position: absolute;
