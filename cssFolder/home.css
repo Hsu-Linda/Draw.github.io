@@ -19,6 +19,12 @@ nav p{
     float:right;
     color:white;
 }
+.dropdown{
+    border:none;
+    outline: none;
+    padding: 14px 16px;
+    margin: 0;
+}
 
 .dropdown:hover .dropdown-content{
     display: block;    
