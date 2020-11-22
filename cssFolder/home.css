@@ -2,11 +2,12 @@ body{
     margin:0
 }
 nav{ background-color:#535D55;
+    box-sizing:border-box; 
+    float:right;
 }
 nav a{ color:white;
         text-decoration: none;/*移除底線*/
         display:block;/*讓<a>填滿<li>*/
-        float: right;
         padding:14px 30px
 
        }
