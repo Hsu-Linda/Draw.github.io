@@ -1,19 +1,22 @@
-/body{
+body{
     margin:0
 }
 nav{background-color:#535D55;
     box-sizing: border-box;
-    /*overflow:hidden;/*新增的*/
+    overflow:hidden;/*新增的*/
 }
 nav a{ color:white;
         text-decoration: none; /*移除底線*/
         padding:14px 30px;
         float:right;
         font-size: 16px;
-        text-align:center;/*新增的*/
+       /* text-align:center;/*新增的*/
        }
 nav a:hover {
     background-color:#7f9871 ;
+}
+nav p{
+    float:right;
 }
 
 .dropdown:hover{
