@@ -2,9 +2,7 @@ nav a{ color:inherit;/*移除超連結顏色*/
         text-decoration: none;/*移除底線*/
         /*display:block;/*讓<a>填滿<li>*/
        }
-nav{ display:flex;
-     justify-content:flex-end;
-     background-color: wheat;
+nav{ background-color:#669;
     }
 
 .hover-color:hover {
@@ -29,6 +27,7 @@ nav{ display:flex;
     display: none;
     position: absolute;
     background-color: thistle;
+    box-sizing: border-box;
     width: 100%;
     left: 0;
     
