@@ -31,8 +31,8 @@ nav p{
     top: 46x;
     /*width: 100%;*/
     left: 0;    
-    z-index: 1;
-    padding:14px;
+    z-index: 1;/*前後*/
+    padding:50px;
     color:white;
 }
 
