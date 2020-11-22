@@ -1,0 +1,1 @@
+$("#orchid").addClass("antmated fadeOut")
