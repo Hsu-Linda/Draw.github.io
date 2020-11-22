@@ -1,20 +1,29 @@
 nav a{ color:inherit;/*移除超連結顏色*/
         text-decoration: none;/*移除底線*/
-        font-size: 1px;
-        display:block;/*讓<a>填滿<li>*/
-        padding:5px}
-nav >ul{
-    list-style:none; /*移除項目符號*/
-    
-}
-nav li:hover {
+        /*display:block;/*讓<a>填滿<li>*/
+       }
+nav{ display:flex;
+     justify-content:flex-end;
+    }
+
+.hover-color {
     background-color:#7f9871 ;/**#535D55*/
     color:white;
 }
-.flex-nav{
-    display:flex;
-    justify-content:flex-end;
-}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: #313;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+
 .dropdown-content{
     display: none;
     position: absolute;
