@@ -4,6 +4,7 @@ nav a{ color:inherit;/*移除超連結顏色*/
        }
 nav{ display:flex;
      justify-content:flex-end;
+     background-color: wheat;
     }
 
 .hover-color:hover {
