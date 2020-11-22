@@ -24,8 +24,8 @@ nav p{
 }
 
 .dropdown-content{
+    box-sizing: border-box;
     display: none;/*一開始先隱藏*/
-    background-color: #667788;
     width: 100%;
     left: 0;    
     z-index: 1;/*前後*/
