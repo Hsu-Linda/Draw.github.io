@@ -1,23 +1,21 @@
 body{
     margin:0
 }
-nav{ background-color:#535D55;
-    box-sizing:border-box; 
-    float:right;
+nav{background-color:#535D55;
+    box-sizing: border-box;
 }
 nav a{ color:white;
         text-decoration: none;/*移除底線*/
         display:block;/*讓<a>填滿<li>*/
-        padding:14px 30px
-
+        padding:14px 30px;
+        float:right
        }
 nav a:hover {
     background-color:#7f9871 ;
 }
 
 .dropdown:hover{
-    display: block;
-    
+    display: block;    
 }
 
 .dropdown-content{
@@ -26,7 +24,6 @@ nav a:hover {
     background-color: #7f9871;
     box-sizing: border-box;
     width: 100%;
-    left: 0;
-    
+    left: 0;    
 }
 
