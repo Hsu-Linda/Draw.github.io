@@ -1,14 +1,16 @@
-/*body{
+/body{
     margin:0
 }
 nav{background-color:#535D55;
     box-sizing: border-box;
+    overflow:hidden;/*新增的*/
 }
 nav a{ color:white;
-        text-decoration: none; /*移除底線
+        text-decoration: none; /*移除底線*/
         padding:14px 30px;
         float:right;
         font-size: 16px;
+        text-align:center;/*新增的*/
        }
 nav a:hover {
     background-color:#7f9871 ;
@@ -19,73 +21,15 @@ nav a:hover {
 }
 
 .dropdown-content{
-    display: none;/*一開始先隱藏
+    display: none;/*一開始先隱藏*/
     position: absolute;
     background-color: #7f9871;
     width: 100%;
     left: 0;    
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    background:#7f9871;/*新增的*/
+    padding:16px;/*新增的*/
+    color:white;/*新增的*/
 }
 
-*/
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-  }
-  
-  nav {
-    overflow: hidden;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  nav a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .dropdown {
-    float: left;
-    overflow: hidden;
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font: inherit;
-    margin: 0;
-  }
-  
-  nav a:hover, .dropdown:hover  {
-    background-color: red;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content .header {
-    background: red;
-    padding: 16px;
-    color: white;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
- 
