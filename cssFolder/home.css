@@ -3,7 +3,7 @@
 }
 nav{background-color:#535D55;
     box-sizing: border-box;
-    overflow:hidden;/*新增的*/
+    /*overflow:hidden;/*新增的*/
 }
 nav a{ color:white;
         text-decoration: none; /*移除底線*/
