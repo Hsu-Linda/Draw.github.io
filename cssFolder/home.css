@@ -3,22 +3,21 @@ body{
 }
 nav{background-color:#535D55;
     box-sizing: border-box;
-    /*overflow:hidden;/*新增的*/
-}
-nav p{
-    float:right;
+    overflow:hidden;/*新增的*/
     color:white;
 }
-
-nav a{ color:white;
-        text-decoration: none; /*移除底線*/
+nav a{ text-decoration: none; /*移除底線*/
         padding:14px 30px;
         float:right;
         font-size: 16px;
-        /*text-align:center;/*新增的*/
+        text-align:center;/*新增的*/
        }
 nav a:hover {
     background-color:#7f9871 ;
+}
+nav p{
+    float:right;
+    
 }
 .dropdown:hover{
     display: block;    
@@ -33,6 +32,5 @@ nav a:hover {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     padding:16px;/*新增的*/
-    color:white;/*新增的*/
 }
 
