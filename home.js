@@ -1,3 +1,9 @@
 $(document).ready(function () {
-    $("#about").addClass("animated bounce");
-});
+    $("about").hover(function () {
+        $(this).addClass("animated bounce");
+        });
+    }, function () {
+            // out
+        }
+    );
+   
