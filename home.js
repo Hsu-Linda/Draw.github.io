@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#about").hover(function () {
+    $("p").hover(function () {
         $(this).addClass("animated bounce");
         });
     }, function () {
