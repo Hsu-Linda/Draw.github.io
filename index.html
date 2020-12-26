@@ -26,10 +26,10 @@
         
         <script type="text/javascript">
             $(document).ready(function(){
-            $("#black_chess").click(
-                $("#oImg").show
-            );
-        })
+            $("#black_chess").click(function(){
+                document.getElementById('oImg').style.display="black";
+                });
+            });
         </script>
     </head>
     <body>
@@ -60,6 +60,8 @@
         
         <img id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" >
         <input type="button" value='顯示圖片' onclick="showPictureOneTime()" >
+
+        <input type="button" value=img id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" >
         
         <img src='https://i.ibb.co/6Pnr8K9/black.png' id="oImg" width="160px" hight="200px"style='display:none'>
 
