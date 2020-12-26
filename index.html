@@ -17,21 +17,15 @@
         </script>
         
         <script>
+            x=1
             cache=""
             function change(){
-              cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png'>"; 
+              cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' id='picture_1_${x}'>"; 
+              x++
               document.getElementById("photo").innerHTML=cache;
             }
         </script>
-         <script>
-             x=1
-            cache=""
-            function addPicture(){
-                cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png'>";
-                <div id='picture1_"+x"'>.innerHTML=cache;</div>
-                
-            }
-        </script>
+         
         
     </head>
     <body>
