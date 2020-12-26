@@ -15,12 +15,17 @@
             });
             });
         </script>        
-        <img id="asd" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black">
-        <img src='https://i.ibb.co/6Pnr8K9/black.png' id="oImg" style='display:none' width="160px" hight="200px">
-        <script language="javascript">
+       <script language="javascript">
             function reP(){
             document.getElementById('asd').style.display = "block";
             }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+              $("button").click(function(){
+                $("#asd").slideToggle();
+              });
+            });
         </script>
     </head>
     <body>
@@ -48,9 +53,10 @@
         </ul>
         <input type="button" id="bl" value="顯示訊息"
         onclick="javascript:window.alert('abcjd')">
-        <!--<input type="button" id="picture1" valure="">!-->
         
         <INPUT TYPE="button" value='顯示圖片' onclick="reP()">
         <img id="asd" onclick="reP()">
+        <img id="asd" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" style='display:none'>
+        <img src='https://i.ibb.co/6Pnr8K9/black.png' id="oImg" style='display:none' width="160px" hight="200px">
     </body>
 </html>
