@@ -40,10 +40,10 @@
     /* 拖動時觸發 */
     document.addEventListener("dragstart", function(event) {
         event.dataTransfer.setData("Text", event.target.id);
-        document.getElementById("demo").innerHTML = "開始拖動 p 元素";
+        
     });
     document.addEventListener("dragend", function(event) {
-        document.getElementById("demo").innerHTML = "完成 p 元素的拖動";
+        
     });
     /* 拖動完成後觸發*/
     document.addEventListener("dragover", function(event) {
@@ -84,14 +84,12 @@
         <br>
         <input type="image"  id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" onclick="change()" >
   
-        <p>該例項演示了如何使用 addEventListener() 方法向檔案物件新增 "ondragstart", "ondrag", "ondragover" 和 "ondrop" 事件。 </p>
-        <p>在兩個矩形框中來回拖動 p 元素:</p>
+        
         <div class="droptarget">
-	    <p draggable="true" id="dragtarget">Drag me!</p>
+	    <div id="photo"></div>
         </div>
         <div class="droptarget"></div>
-        <p style="clear:both;"><strong>注意：</strong>Internet Explorer 8 及更早 IE 版本或 Safari 5.1 及更早版本的瀏覽器不支援 drag 事件。</p>
-        <p id="demo"></p>
+        
         
         
         
