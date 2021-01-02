@@ -20,7 +20,7 @@
             x=1
             cache=""
             function change(){
-              cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' id='picture_1_${x}'>"; 
+              cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' id='picture_1_${x}' draggable='true'>"; 
               x++
               document.getElementById("photo").innerHTML=cache;
             }
@@ -46,18 +46,34 @@
         </nav>
         <p>你喜歡哪項運動?</p>
         <ul ondragstart="dragStartHandler">
-            <li draggable="true" data-sport="baseball">棒球</li>
-            <li draggable="true" data-sport="basketball">籃球</li>
-            <li draggable="true" data-sport="tennis">網球</li>
+            <li draggable="true" ondragstart="drag(event)" id="baseball">棒球</li>
+            <li draggable="true" ondragstart="drag(event)" id="basketball">籃球</li>
+            <li draggable="true" ondragstart="drag(event)" id="tennis">網球</li>
         </ul>
+        <div ondragover="allowDrop(event)" ondrop="dropn(event)"></div>
         
         <input type="button" id="bl" value="顯示訊息"
         onclick="javascript:window.alert('abcjd')">
         
         
         <input type="image"  id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" onclick="change()" >
-        <div id="photo">
-        <input type="image"  id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" onclick="addPicture()" >
+        <div id="photo" >
+        
+        <script>
+            function drog(ev)
+            {
+                ev.dataTransfer.setData("Text",ev.target.id);
+            }
+            function allowDrop(ev){
+                ev.preventDefault();
+            }
+            function drop(ev){
+                ev.preventDefault();
+                var data=ev.dataTransfer.getData("Text")
+                ev.target.appenChild(document.getElementById(data));
+            }
+        </Script>
+        
         
        
     </body>
