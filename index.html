@@ -5,6 +5,16 @@
         <title>abc</title>
         <meta name="description" content="abc" >
         <meta name="keywords" content="abc">
+        <style>
+            .droptarget {
+                float: left; 
+                width: 100px; 
+                height: 35px;
+                margin: 15px;
+                padding: 10px;
+                border: 1px solid #aaaaaa;
+            }
+        </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
@@ -20,24 +30,27 @@
             x=1
             cache=""
             function change(){
-              cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' id='picture_1_${x}' draggable='true'>"; 
+              cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' draggable='true' id='picture_1_${x}'>"; 
               x++
               document.getElementById("photo").innerHTML=cache;
             }
         </script>
+
         <script>
-            function drog(ev)
-            {
-                ev.dataTransfer.setData("Text",ev.target.id);
-            }
-            function allowDrop(ev){
-                ev.preventDefault();
-            }
-            function drop(ev){
-                ev.preventDefault();
-                var data=ev.dataTransfer.getData("Text")
-                ev.target.appenChild(document.getElementById(data));
-            }
+            /*拖動觸發*/
+            document.addEventListener("dragstart",function(event){
+                event.dataTransfer.setData("Text",event.target.id);
+            });
+            document.addEventListener("dragover",function(event){
+                event.preventDefault();
+            });
+            document.addEventListener("drop",function(event){
+                event.preventDefault();
+                if(event.target.classNamd=="droptarget"){
+                    var data=evemt.dataTransfer.getData("Text");
+                    event.target.appendChild(document.getElementById(data));
+                }
+            });
         </Script>
          
         
@@ -58,23 +71,16 @@
                     </div>        
             </div>
         </nav>
-        <p>你喜歡哪項運動?</p>
-        <ul ondragstart="drag(event)" draggable="true">
-            <li id="baseball">棒球</li>
-            <li id="basketball">籃球</li>
-            <li id="tennis">網球</li>
-        </ul>
-        <br>
-        <br>
+        
+
         <input type="button" id="bl" value="顯示訊息"
         onclick="javascript:window.alert('abcjd')">
         
         <br>
         <input type="image"  id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" onclick="change()" >
-        <div id="photo" >
-        <br>
-        <p>貼在這</p>
-        <div ondragover="allowDrop(event)" ondrop="dropn(event)"></div>
+        <div class="droptarget" id="photo" ></div>
+        
+        
         
         
        
