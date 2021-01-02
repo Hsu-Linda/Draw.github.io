@@ -25,6 +25,20 @@
               document.getElementById("photo").innerHTML=cache;
             }
         </script>
+        <script>
+            function drog(ev)
+            {
+                ev.dataTransfer.setData("Text",ev.target.id);
+            }
+            function allowDrop(ev){
+                ev.preventDefault();
+            }
+            function drop(ev){
+                ev.preventDefault();
+                var data=ev.dataTransfer.getData("Text")
+                ev.target.appenChild(document.getElementById(data));
+            }
+        </Script>
          
         
     </head>
@@ -45,34 +59,21 @@
             </div>
         </nav>
         <p>你喜歡哪項運動?</p>
-        <ul ondragstart="dragStartHandler">
-            <li draggable="true" ondragstart="drag(event)" id="baseball">棒球</li>
-            <li draggable="true" ondragstart="drag(event)" id="basketball">籃球</li>
-            <li draggable="true" ondragstart="drag(event)" id="tennis">網球</li>
+        <ul ondragstart="drag(event)" draggable="true">
+            <li id="baseball">棒球</li>
+            <li id="basketball">籃球</li>
+            <li id="tennis">網球</li>
         </ul>
-        <div ondragover="allowDrop(event)" ondrop="dropn(event)"></div>
-        
+        <br>
+        <br>
         <input type="button" id="bl" value="顯示訊息"
         onclick="javascript:window.alert('abcjd')">
         
-        
+        <br>
         <input type="image"  id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" onclick="change()" >
         <div id="photo" >
-        
-        <script>
-            function drog(ev)
-            {
-                ev.dataTransfer.setData("Text",ev.target.id);
-            }
-            function allowDrop(ev){
-                ev.preventDefault();
-            }
-            function drop(ev){
-                ev.preventDefault();
-                var data=ev.dataTransfer.getData("Text")
-                ev.target.appenChild(document.getElementById(data));
-            }
-        </Script>
+        <br>
+        <p>貼在這</p>
         <div ondragover="allowDrop(event)" ondrop="dropn(event)"></div>
         
         
