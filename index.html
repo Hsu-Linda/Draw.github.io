@@ -8,8 +8,8 @@
         <style>
             .droptarget {
                 float: left; 
-                width: 100px; 
-                height: 350px;
+                width: 300px; 
+                height: 200px;
                 margin: 15px;
                 padding: 10px;
                 border: 1px solid #aaaaaa;
@@ -30,7 +30,7 @@
             x=1
             cache=""
             function change(){
-              cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' draggable='true' id='picture_1_${x}'>"; 
+              cache="<img src='https://i.ibb.co/6Pnr8K9/black.png' draggable='true' id='picture_1_${x}'>"; 
               x++
               document.getElementById("photo").innerHTML=cache;
             }
