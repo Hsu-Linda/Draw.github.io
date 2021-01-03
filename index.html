@@ -6,9 +6,8 @@
         <meta name="description" content="abc" >
         <meta name="keywords" content="abc">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="JS.js"></script>
         <script src="https://unpkg.com/konva@^4.0.3/konva.js"></script>
-         
+        <script src="JS.js"></script> 
         
     </head>
     <body>
@@ -31,7 +30,25 @@
         
         <div id="container" class="draw"></div>
         <div id="show" onclick="showImage()">showImage</div>
-        
+        <script>
+            function showImage(){
+                var image =new Image();
+                image.src="https://i.ibb.co/6Pnr8K9/black.png"
+                image.draggable=true
+                document.getElementById("show").appendChild(image)
+            }
+    
+
+            var stage = new Konva.Stage({
+                container:"container",
+                width:window.innerWidth,
+                heigh:window.innerHeight
+            });
+
+            var layer = new Konva.Layer();
+            layer.add(image)
+            stage.add(layer)    
+        </script>
         
         
        
