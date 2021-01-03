@@ -24,7 +24,7 @@ function showImage(){
 }
     
 
-var stage = new Konva.Layer({
+var stage = new Konva.stage({
     container:"container",
     width:window.innerWidth,
     heigh:window.innerHeight
