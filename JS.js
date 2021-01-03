@@ -9,12 +9,7 @@ $(document).ready(function(){
         
         
         
-cache=""
-function addphoto(){    
-    cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' draggable='true'>"; 
-    var photo
-    photo.add(cache)
-}
+
 
 function showImage(){
     var image =new Image();
@@ -32,7 +27,7 @@ var stage = new Konva.Stage({
 });
 
 var layer = new Konva.Layer();
-layer.add(photo)
+layer.add(image)
 stage.add(layer)
 
 
