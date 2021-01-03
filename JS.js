@@ -12,11 +12,19 @@ $(document).ready(function(){
 cache=""
 function addphoto(){    
     cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' draggable='true'>"; 
-    var photo=cache;
+    var photo
+    photo.add(cache)
+}
+
+function showImage(){
+    var image =new Image();
+    image.src="https://i.ibb.co/6Pnr8K9/black.png"
+    document.getElementById("show").appendChild(image)
+
 }
     
 
-var stage = new Konva.Layoer({
+var stage = new Konva.Layer({
     container:"container",
     width:window.innerWidth,
     heigh:window.innerHeight
