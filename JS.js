@@ -1,4 +1,4 @@
-
+src="https://unpkg.com/konva@7.2.2/konva.min.js"
 $(document).ready(function(){
     $("a").hover(function(){
         $("p").hide();
@@ -9,28 +9,24 @@ $(document).ready(function(){
         
         
         
-x=1
 cache=""
-function change(){
-    cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' draggable='true' id='picture_1_${x}'>"; 
-    x++
-document.getElementById("photo").innerHTML=cache;
+function addphoto(){    
+    cache+="<img src='https://i.ibb.co/6Pnr8K9/black.png' draggable='true'>"; 
+    var photo=cache;
 }
     
 
-
-document.addEventListener("dragstart", function(event) {
-    event.dataTransfer.setData("Text", event.target.id);
-    });
-
-    /* 拖動完成後觸發*/
-document.addEventListener("dragover", function(event) {
-    event.preventDefault();
+var stage = new Konva.Layoer({
+    container:"container",
+    width:window.innerWidth,
+    heigh:window.innerHeight
 });
-document.addEventListener("drop", function(event) {
-    event.preventDefault();
-    if ( event.target.className == "droptarget" ) {
-        var data = event.dataTransfer.getData("Text");
-        event.target.appendChild(document.getElementById(data));
-    }
-});
+
+var layer = new Konva.Layer();
+layer.add(photo)
+stage.add(layer)
+
+
+
+
+

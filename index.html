@@ -5,46 +5,17 @@
         <title>abc</title>
         <meta name="description" content="abc" >
         <meta name="keywords" content="abc">
-        <style>
-            .droptarget {
-                float: left; 
-                width: 300px; 
-                height: 200px;
-                margin: 15px;
-                padding: 10px;
-                border: 1px solid #aaaaaa;
-            }
-        </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="JS.js"></script>
-        <script>
-        document.addEventListener("dragstart", function(event) {
-            event.dataTransfer.setData("Text", event.target.id);
-            });
-        
-            /* 拖動完成後觸發*/
-        document.addEventListener("dragover", function(event) {
-            event.preventDefault();
-        });
-        document.addEventListener("drop", function(event) {
-            event.preventDefault();
-            if ( event.target.className == "droptarget" ) {
-                var data = event.dataTransfer.getData("Text");
-                event.target.appendChild(document.getElementById(data));
-            }
-        });
-        </script>
-        
+     
          
         
     </head>
     <body>
         
-        <nav >
-            <a href="#" id="about">關於</a> 
-            <p>|</p>
-            <a href="#">訂購方式</a> 
-            <p>|</p>
+        <nav>
+            <a href="#" id="about">關於</a> <p>|</p>
+            <a href="#">訂購方式</a> <p>|</p>
             <div class="dropdown">
                 <a href="#" class=" hover-color">花</a>  
                     <div class="dropdown-content">
@@ -54,20 +25,11 @@
                     </div>        
             </div>
         </nav>
+           
+       <br>
+        <input type="image"  id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" onclick="addphoto(src)" >
         
-
-        <input type="button" id="bl" value="顯示訊息"
-        onclick="javascript:window.alert('abcjd')">
-        
-        <br>
-        <input type="image"  id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" onclick="change()" >
-  
-        
-        <div class="droptarget">
-	    <div id="photo"></div>
-        </div>
-        <div class="droptarget"></div>
-        
+        <div id="container"></div>
         
         
         
