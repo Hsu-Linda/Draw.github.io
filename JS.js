@@ -1,6 +1,4 @@
-function myFunction() {
-    alert("儲存了嗎");
-  }
+
 
 document.addEventListener("dragstart", function (event) {
     event.dataTransfer.setData("Text", event.target.id);

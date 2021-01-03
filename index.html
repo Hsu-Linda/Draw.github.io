@@ -85,7 +85,7 @@
     <script src="JS.js"></script>
 
 </head>
-<body onunload="myFunction()">
+<body >
     <nav>
         <a href="#" id="about">教學</a>
         <p>|</p>
@@ -102,20 +102,11 @@
     </nav>
 
 
-   
-
-    <div style="float:right">
-        <a href="#">�t�s�s��</a>
-    </div>
-    <br>
-    <input type="image" id="black_chess" src="https://i.ibb.co/6Pnr8K9/black.png" alt="black" onclick="change()">
-
-
     <div class="context">
         <div class="support" style="text-align:center">
-            <a>�d��</a>
-            <a onclick="displayelement()">����</a>
-            <a onclick="createtxt()">��r</a>
+            <a>範本</a>
+            <a onclick="displayelement()">元素</a>
+            <a onclick="createtxt()">文字</a>
         </div>
         <div class="image">
             <img id="img1" />
@@ -130,13 +121,11 @@
             <img id="img10" />
 
         </div>
-
-
     </div>
     <div class="droptarget">
         <div style="float:right">
-            <a onclick="clearBox('photo')"> �R������</a>
-            <a onclick="clearBox('droptarget')"> �M������ </a>
+            <a onclick="clearBox('photo')">清除頁面</a>
+            <a onclick="clearBox('droptarget')">刪除物件 </a>
         </div>
         <div id="photo"></div>
     </div>
