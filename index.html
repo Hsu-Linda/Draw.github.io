@@ -2,136 +2,82 @@
   <!--�`�N  �@�w�n��html �g�W�h*/-->
 <html>
 <head>
-    <title>designByMyself</title>
+    <link rel="stylesheet" type="text/css" href="cssFolder/home.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <title>abc</title>
     <meta name="description" content="abc">
     <meta name="keywords" content="abc">
+
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        .droptarget {
-            float: left;
-            width: 50%;
-            height: 200px;
-            margin: 15px;
-            padding: 10px;
-            border: 1px solid #aaaaaa;
-        }
-        .context {
-            float: left;
-            width: 25%;
-            margin: 15px;
-            padding: 10px;
-            border: 1px solid #aaaaaa;
-        }
-        body {
-            margin: 0;
-        }
+        
 
-        nav {
-            background-color: #535D55;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-
-            nav a {
-                color: white;
-                text-decoration: none; /*�������u*/
-                padding: 14px 16px; /*�W�U ���k*/
-                float: right;
-                font-size: 16px;
-                text-align: center;
-            }
-
-                nav a:hover {
-                    background-color: #7f9871;
-                }
-
-            nav p {
-                float: right;
-                color: white;
-            }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content {
-            box-sizing: border-box;
-            display: none; /*�@�}�l������*/
-            width: 100%;
-            left: 0;
-            z-index: 1; /*�e��*/
-            padding: 14px 16px;
-            color: white;
-        }
-        .context img{
-            width:150px;
-            height:100px;
-            position: relative;
-        }
-        #mydiv {
-            padding: 10px;
-            cursor: move;
-            z-index: 10;
-            background-color: #2196F3;
-            color: #fff;
-        }
-        .picture_1_$x {
-            position: relative;
-        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="JS.js"></script>
 
+  
 </head>
-<body >
+<body onload="init()">
     <nav>
-        <a href="#" id="about">教學</a>
+        <a href="#" id="about">�е{</a>
         <p>|</p>
-        <a href="#">另存新檔</a>
+        <a href="#" id="export">�t�s�s��</a>
         <p>|</p>
         <div class="dropdown">
-            <a href="#" class=" hover-color">分享</a>
+            <a href="#" class=" hover-color">����</a>
             <div class="dropdown-content">
-                <a href="#">ig</a>
-                <a href="#">fb</a>
                 <a href="#">Line</a>
+                <a href="#">FB</a>
+                <a href="#">IG</a>
             </div>
         </div>
     </nav>
 
-
+    <br>
     <div class="context">
+
         <div class="support" style="text-align:center">
-            <a>範本</a>
-            <a onclick="displayelement()">元素</a>
-            <a onclick="createtxt()">文字</a>
+            <a>�d��</a>
+            <a onclick="displayelement()">����</a>
+            <a id="btClickMe">��r</a>
         </div>
         <div class="image">
-            <img id="img1" />
-            <img id="img2" />
-            <img id="img3" />
-            <img id="img4" />
-            <img id="img5" />
-            <img id="img6" />
-            <img id="img7" />
-            <img id="img8" />
-            <img id="img9" />
-            <img id="img10" />
+            <img id="img1" onclick="change1()" />
+            <img id="img2" onclick="change2()" />
+            <img id="img3" onclick="change3()" />
+            <img id="img4" onclick="change4()" />
+            <img id="img5" onclick="change5()" />
+            <img id="img6" onclick="change6()" />
+            <img id="img7" onclick="change7()" />
+            <img id="img8" onclick="change8()" />
+            <img id="img9" onclick="change9()" />
+            <img id="img10" onclick="change10()" />
 
         </div>
     </div>
-    <div class="droptarget">
-        <div style="float:right">
-            <a onclick="clearBox('photo')">清除頁面</a>
-            <a onclick="clearBox('droptarget')">刪除物件 </a>
+    <div id="divContainer">
+        <div style="width: 100%; height: 75%; border-style: solid; border-width: 1px; text-align: center; background-color: #FFFFFF;"
+            onmousedown="md()" onmousemove="mv()" onmouseup="mup()">
+            <canvas id="m" width="400" height="300"></canvas>
         </div>
-        <div id="photo"></div>
-    </div>
-    <br />
-
-
-
+        <p style="text-align: center">
+            ����G
+            <input id="Radio1" checked="" name="R" type="radio" value="V1" onclick="return Radio1_onclick()" />��
+            <input id="Radio2" checked="" name="R" type="radio" value="V1" onclick="return Radio2_onclick()" />��
+            <input id="Radio3" checked="" name="R" type="radio" value="V1" onclick="return Radio3_onclick()" />��
+            <input id="Radio4" checked="checked" name="R" type="radio" value="V1" onclick="return Radio4_onclick()" />��
+        </p>
+        <p style="text-align: center">
+            ���ʡG
+            <input id="Radio5" checked="" name="W" type="radio" value="V1" onclick="return Radio5_onclick()" />1px
+            <input id="Radio6" checked="" name="W" type="radio" value="V1" onclick="return Radio6_onclick()" />2px
+            <input id="Radio7" checked="" name="W" type="radio" value="V1" onclick="return Radio7_onclick()" />3px
+            <input id="Radio8" checked="" name="W" type="radio" value="V1" onclick="return Radio8_onclick()" />5px
+            <input id="Radio9" checked="" name="W" type="radio" value="V1" onclick="return Radio9_onclick()" />10px
+        </p>
+        <p style="text-align: center">
+            <input id="Button1" type="button" value="�M���e��" onclick="return Button1_onclick()" />
+</div>
 </body>
 </html>
